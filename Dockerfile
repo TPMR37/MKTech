@@ -9,7 +9,7 @@ RUN apt-get update && apt-get install -y curl && rm -rf /var/lib/apt/lists/*
 
 # Descargar el WAR desde el Release de GitHub
 RUN curl -L -o /usr/local/tomcat/webapps/SistemaEmpresarial.war \
-    "https://github.com/jesus2318/sistema-empresarial-docker/releases/download/v3/SistemaEmpresarial.war"
+    "https://github.com/TPMR37/MKTech/releases/download/Number1/SistemaEmpresarial.war"
 
 # Copiar el driver JDBC de SQL Server al classpath de Tomcat
 COPY lib/mssql-jdbc-*.jar /usr/local/tomcat/lib/
@@ -19,6 +19,7 @@ EXPOSE 8080
 
 # Comando de inicio
 CMD ["catalina.sh", "run"]
+
 
 
 
